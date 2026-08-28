@@ -1,117 +1,80 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>My Portfolio</title>
-
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    <!-- Navigation -->
+    <!-- Navigation Bar -->
     <nav>
-        <div class="logo">My Portfolio</div>
-
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#schoolworks">Schoolworks</a></li>
-        </ul>
+        <div class="nav-container">
+            <div class="logo">MyPortfolio</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#schoolworks">Schoolworks</a></li>
+            </ul>
+        </div>
     </nav>
 
-
-    <!-- Home -->
-    <section id="home" class="home">
-
-        <div class="home-content">
-
-            <p class="welcome">WELCOME TO MY PORTFOLIO</p>
-
-            <h1>
-                Hi, I'm <span>Aizel Kim Mabini</span>
-            </h1>
-
-            <h2>Computer Science Student</h2>
-
-            <p>
-                Welcome to my personal portfolio.
-                Here you can learn more about me and
-                see some of my schoolworks.
-            </p>
-
-            <a href="#about" class="button">
-                About Me
-            </a>
-
+    <!-- Home Section -->
+    <section id="home">
+        <div class="container">
+            <div class="home-content">
+                <h1>Hello, I'm Aizel</h1>
+                <p>Welcome to my student portfolio website.</p>
+                <a href="#schoolworks" class="btn">View My Work</a>
+            </div>
         </div>
-
     </section>
 
-
-    <!-- About Me -->
-    <section id="about" class="section about">
-
-        <h2>About Me</h2>
-
-        <div class="about-box">
-
-            <p>
-                Hello! I'm Aizel Kim Mabini, a Computer Science
-                student interested in technology, web development,
-                and creative design.
-            </p>
-
-            <p>
-                I enjoy learning new things, developing my
-                programming skills, and creating projects that
-                are useful and meaningful.
-            </p>
-
+    <!-- About Me Section -->
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <p>Hello! I'm Aizel Kim Mabini, a Computer Science student interested in technology, web development, and creative design.</p>
+                <br>
+                <p>I enjoy learning new things, developing my programming skills, and creating projects that are useful and meaningful.</p>
+            </div>
         </div>
-
     </section>
 
+    <!-- Schoolworks Section -->
+    <section id="schoolworks">
+        <div class="container">
+            <h2>Schoolworks</h2>
+            <div class="gallery">
+                
+                <!-- Photo 1 -->
+                <div class="work-item">
+                    <!-- Replace 'project1.jpg' with your image path -->
+                    <img src="q1.jpg" alt="School Project 1">
+                    <div class="work-info">
+                      
+                    </div>
+                </div>
 
-    <!-- Schoolworks -->
-    <section id="schoolworks" class="section schoolworks">
+                <!-- Photo 2 -->
+                <div class="work-item">
+                    <!-- Replace 'project2.jpg' with your image path -->
+                    <img src="q1..jpg" alt="School Project 2">
+                    <div class="work-info">
+                        
+                    </div>
+                </div>
 
-        <h2>My Schoolworks</h2>
-
-        <p class="schoolworks-text">
-            Here are some of my school activities.
-        </p>
-
-        <div class="schoolworks-container">
-
-            <!-- Photo 1 -->
-            <a href="images/activity1.jpg" target="_blank" class="schoolwork-card">
-                <img src="q1.jpg" alt="Schoolwork 1">
-            </a>
-
-
-            <!-- Photo 2 -->
-            <a href="images/activity2.jpg" target="_blank" class="schoolwork-card">
-                <img src="q1..jpg" alt="Schoolwork 2">
-            </a>
-
+            </div>
         </div>
-
     </section>
-
 
     <!-- Footer -->
     <footer>
-        <p>© 2026 Aizel Kim Mabini | My Portfolio</p>
+        <p>&copy; 2026 [Your Name]. All Rights Reserved.</p>
     </footer>
-
-
-    <script src="script.js"></script>
 
 </body>
 </html>
-```
