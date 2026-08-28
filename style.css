@@ -1,3 +1,25 @@
+```css
+
+
+:root {
+    --sage: #9caf88;
+    --dark-sage: #5f7350;
+    --light-sage: #e4eddc;
+
+    --pink: #d98ca5;
+    --dark-pink: #c56f8d;
+    --light-pink: #f8dce5;
+
+    --cream: #fffaf7;
+    --white: #ffffff;
+    --text: #4f554a;
+}
+
+
+/* =========================
+   GENERAL
+========================= */
+
 * {
     margin: 0;
     padding: 0;
@@ -6,251 +28,331 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #fffdf8;
-    color: #4b5545;
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: var(--text);
+    background-color: var(--cream);
+    line-height: 1.7;
 }
 
+section {
+    scroll-margin-top: 80px;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
 nav {
-    background-color: #a8b89a;
-    padding: 20px 8%;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 75px;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    position: sticky;
-    top: 0;
+    padding: 0 8%;
+
+    background-color: var(--white);
+
+    border-bottom: 3px solid var(--light-pink);
+
     z-index: 1000;
 }
 
 .logo {
-    color: white;
+    color: var(--dark-sage);
     font-size: 24px;
     font-weight: bold;
 }
 
 nav ul {
     display: flex;
-    gap: 25px;
+    gap: 30px;
     list-style: none;
 }
 
-nav a {
-    color: white;
+nav ul li a {
+    color: var(--dark-sage);
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 600;
+
+    transition: 0.3s;
 }
 
-nav a:hover {
-    color: #efa3b5;
+nav ul li a:hover {
+    color: var(--dark-pink);
 }
 
-home {
-    min-height: 90vh;
+
+/* =========================
+   HOME
+========================= */
+
+.hero {
+    min-height: 100vh;
 
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
 
-    gap: 80px;
+    text-align: center;
 
-    padding: 60px 10%;
+    padding: 120px 10% 70px;
 
-    background-color: #fffdf8;
+    background:
+        radial-gradient(
+            circle at 10% 20%,
+            var(--light-pink),
+            transparent 25%
+        ),
+        radial-gradient(
+            circle at 90% 80%,
+            var(--light-sage),
+            transparent 30%
+        ),
+        var(--cream);
 }
 
 .hero-text {
-    max-width: 550px;
+    max-width: 850px;
 }
 
-.small-text {
-    color: #718267;
+.welcome {
+    color: var(--dark-pink);
     font-size: 14px;
     font-weight: bold;
-    letter-spacing: 2px;
-
-    margin-bottom: 10px;
-}
-
-.hero-text h1 {
-    font-size: 55px;
-    color: #4b5545;
-
-    margin-bottom: 10px;
-}
-
-.hero-text h1 span {
-    color: #efa3b5;
-}
-
-.hero-text h2 {
-    color: #718267;
-    font-size: 25px;
-
+    letter-spacing: 3px;
     margin-bottom: 15px;
 }
 
-.hero-text p {
-    font-size: 17px;
-    line-height: 1.7;
-
-    margin-bottom: 25px;
+.hero h1 {
+    color: var(--dark-sage);
+    font-size: 55px;
+    margin-bottom: 10px;
 }
+
+.hero h1 span {
+    color: var(--dark-pink);
+}
+
+.hero h2 {
+    color: var(--sage);
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.hero p:not(.welcome) {
+    max-width: 650px;
+    margin: 0 auto 30px;
+}
+
+
+/* Button */
 
 .button {
     display: inline-block;
 
-    padding: 12px 25px;
+    padding: 12px 28px;
 
-    background-color: #efa3b5;
-    color: white;
+    background-color: var(--pink);
+    color: var(--white);
+
+    border-radius: 30px;
 
     text-decoration: none;
     font-weight: bold;
-
-    border-radius: 25px;
 
     transition: 0.3s;
 }
 
 .button:hover {
-    background-color: #718267;
+    background-color: var(--dark-sage);
     transform: translateY(-3px);
 }
 
 
-#about {
-    min-height: 60vh;
+/* =========================
+   GENERAL SECTION
+========================= */
 
-    padding: 90px 10%;
-
-    text-align: center;
-
-    background-color: #fce4ea;
-}
-
-#about h2 {
-    color: #718267;
-
-    font-size: 38px;
-
-    margin-bottom: 25px;
-}
-
-#about p {
-    max-width: 750px;
-
-    margin: auto;
-
-    font-size: 17px;
-
-    line-height: 1.8;
-
-    color: #4b5545;
-}
-
-.about-box {
-    max-width: 850px;
-
-    margin: 30px auto 0;
-
-    padding: 30px;
-
-    background-color: #fffdf8;
-
-    border-left: 6px solid #a8b89a;
-
-    border-radius: 15px;
-
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
-}
-
-.circle img {
-    width: 50%;
-    height: 50%;
-    object-fit: cover;
-    border-radius: 50%;
-}
-
-
-.schoolworks {
-    background-color: #dfe9d5;
-    text-align: center;
+.section {
+    min-height: 70vh;
     padding: 100px 8%;
 }
 
-.schoolworks h2 {
-    color: #5f7350;
-    font-size: 42px;
+.section-title {
+    text-align: center;
     margin-bottom: 45px;
 }
 
+.section-title p {
+    color: var(--dark-pink);
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
 
+.section-title h2 {
+    color: var(--dark-sage);
+    font-size: 42px;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+    background-color: var(--light-sage);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about-box {
+    max-width: 800px;
+
+    margin: 0 auto;
+
+    padding: 40px;
+
+    background-color: var(--white);
+
+    border-left: 7px solid var(--pink);
+    border-radius: 20px;
+
+    box-shadow: 0 10px 25px rgba(95, 115, 80, 0.15);
+}
+
+.about-box h3 {
+    color: var(--dark-pink);
+    font-size: 26px;
+    margin-bottom: 15px;
+}
+
+.about-box p {
+    margin-bottom: 15px;
+}
+
+.about-box p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================
+   SCHOOLWORKS
+========================= */
+
+.schoolworks {
+    background-color: var(--light-pink);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
 .schoolworks-container {
     display: flex;
+
     justify-content: center;
     align-items: center;
+
     gap: 35px;
 
     max-width: 1000px;
+
     margin: 0 auto;
 }
 
 
-
+/* Schoolwork Photo */
 
 .schoolwork-card {
     width: 400px;
     height: 300px;
 
-    background-color: #f9dce5;
+    background-color: var(--white);
 
-    border: 5px solid #d98ca5;
-    border-radius: 20px;
+    border: 6px solid var(--sage);
+
+    border-radius: 22px;
 
     overflow: hidden;
 
-    box-shadow: 0 8px 20px rgba(95, 115, 80, 0.2);
+    box-shadow: 0 10px 25px rgba(95, 115, 80, 0.2);
 
     transition: 0.3s ease;
 }
 
+.schoolwork-card:hover {
+    border-color: var(--pink);
 
+    transform: translateY(-8px);
 
+    box-shadow: 0 15px 30px rgba(197, 111, 141, 0.25);
+}
 
 .schoolwork-card img {
-    width: 50%;
-    height: 50%;
+    width: 100%;
+    height: 100%;
+
+    display: block;
 
     object-fit: cover;
 
-    display: block;
+    transition: 0.4s ease;
+}
+
+.schoolwork-card:hover img {
+    transform: scale(1.05);
 }
 
 
+/* =========================
+   FOOTER
+========================= */
 
+footer {
+    padding: 30px;
 
-.schoolwork-card:hover {
-    transform: translateY(-8px);
+    text-align: center;
 
-    border-color: #71845f;
+    background-color: var(--dark-sage);
 
-    box-shadow: 0 12px 25px rgba(217, 140, 165, 0.3);
+    color: var(--white);
+}
+
+footer p {
+    margin: 0;
 }
 
 
+/* =========================
+   RESPONSIVE
+========================= */
 
+@media (max-width: 800px) {
 
-@media (max-width: 400px) {
-
-    .schoolworks {
-        padding: 80px 5%;
+    nav {
+        padding: 0 5%;
     }
 
-    .schoolworks h2 {
-        font-size: 30px;
+    nav ul {
+        gap: 15px;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
     }
 
     .schoolworks-container {
@@ -259,10 +361,52 @@ home {
 
     .schoolwork-card {
         width: 100%;
-        max-width: 300px;
-        height: 280px;
+        max-width: 450px;
     }
-
 }
 
+
+@media (max-width: 500px) {
+
+    nav {
+        height: auto;
+        padding: 15px;
+
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        padding-top: 150px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero h2 {
+        font-size: 22px;
+    }
+
+    .section {
+        padding: 80px 5%;
+    }
+
+    .section-title h2 {
+        font-size: 34px;
+    }
+
+    .about-box {
+        padding: 25px;
+    }
+
+    .schoolwork-card {
+        height: 250px;
+    }
+}
 
