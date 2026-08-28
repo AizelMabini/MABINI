@@ -1,26 +1,7 @@
 ```css
-/* ========================================
-   SAGE GREEN + PINK PORTFOLIO
-======================================== */
-
-:root {
-    --sage-green: #9caf88;
-    --dark-sage: #5f7350;
-    --light-sage: #e5eddf;
-
-    --pink: #e49aae;
-    --dark-pink: #c96f89;
-    --light-pink: #f9dce5;
-
-    --cream: #fffaf8;
-    --white: #ffffff;
-    --text: #4f554b;
-}
-
-
-/* ========================================
+/* =========================
    GENERAL
-======================================== */
+========================= */
 
 * {
     margin: 0;
@@ -30,20 +11,15 @@
 }
 
 body {
-    font-family: "Segoe UI", Arial, sans-serif;
-    background-color: var(--#9caf88);
-    color: var(--text);
-    line-height: 1.6;
-}
-
-section {
-    scroll-margin-top: 80px;
+    font-family: Arial, sans-serif;
+    background-color: #f3eafa;
+    color: #4d4357;
 }
 
 
-/* ========================================
+/* =========================
    NAVIGATION
-======================================== */
+========================= */
 
 nav {
     position: fixed;
@@ -51,7 +27,7 @@ nav {
     left: 0;
 
     width: 100%;
-    height: 75px;
+    height: 70px;
 
     display: flex;
     justify-content: space-between;
@@ -59,47 +35,43 @@ nav {
 
     padding: 0 8%;
 
-    background-color: var(--#9caf88);
+    background-color: #d8c2eb;
 
-    box-shadow: 0 3px 12px rgba(95, 115, 80, 0.2);
+    box-shadow: 0 3px 10px rgba(80, 60, 100, 0.15);
 
     z-index: 1000;
 }
 
 .logo {
-    color: white;
-    font-size: 24px;
+    color: #5e4770;
+    font-size: 23px;
     font-weight: bold;
 }
 
 nav ul {
     display: flex;
-    gap: 30px;
+    gap: 25px;
     list-style: none;
 }
 
 nav ul li a {
-    color: white;
     text-decoration: none;
-    font-weight: 600;
-
-    padding: 8px 12px;
-    border-radius: 20px;
+    color: #5e4770;
+    font-weight: bold;
 
     transition: 0.3s;
 }
 
 nav ul li a:hover {
-    background-color: var(#f9dce5);
-    color: white;
+    color: #9b6fc2;
 }
 
 
-/* ========================================
+/* =========================
    HOME
-======================================== */
+========================= */
 
-.hero {
+.home {
     min-height: 100vh;
 
     display: flex;
@@ -108,60 +80,17 @@ nav ul li a:hover {
 
     text-align: center;
 
-    padding: 120px 10% 70px;
+    padding: 100px 10%;
 
-    background-color: var(#f9dce5);
-
-    position: relative;
-    overflow: hidden;
+    background-color: #f3eafa;
 }
 
-
-/* Decorative circles */
-
-.hero::before {
-    content: "";
-    position: absolute;
-
-    width: 300px;
-    height: 300px;
-
-    background-color: var(--sage-green);
-
-    border-radius: 50%;
-
-    top: -100px;
-    left: -100px;
-
-    opacity: 0.35;
-}
-
-.hero::after {
-    content: "";
-    position: absolute;
-
-    width: 250px;
-    height: 250px;
-
-    background-color: var(--pink);
-
-    border-radius: 50%;
-
-    bottom: -100px;
-    right: -70px;
-
-    opacity: 0.4;
-}
-
-
-.hero-text {
-    max-width: 850px;
-    position: relative;
-    z-index: 2;
+.home-content {
+    max-width: 750px;
 }
 
 .welcome {
-    color: var(--dark-pink);
+    color: #9b6fc2;
 
     font-size: 14px;
     font-weight: bold;
@@ -171,109 +100,87 @@ nav ul li a:hover {
     margin-bottom: 15px;
 }
 
-.hero h1 {
-    color: var(--dark-sage);
+.home h1 {
+    color: #5e4770;
 
-    font-size: 55px;
+    font-size: 50px;
 
     margin-bottom: 10px;
 }
 
-.hero h1 span {
-    color: var(--dark-pink);
+.home h1 span {
+    color: #9b6fc2;
 }
 
-.hero h2 {
-    color: var(--sage-green);
+.home h2 {
+    color: #806096;
 
-    font-size: 28px;
+    font-size: 25px;
 
     margin-bottom: 20px;
 }
 
-.hero p:not(.welcome) {
-    max-width: 650px;
-
-    margin: 0 auto 30px;
-
-    color: var(--text);
-
-    font-size: 17px;
+.home-content > p:not(.welcome) {
+    margin-bottom: 30px;
 }
 
 
-/* ========================================
+/* =========================
    BUTTON
-======================================== */
+========================= */
 
 .button {
     display: inline-block;
 
-    padding: 13px 30px;
+    padding: 12px 28px;
 
-    background-color: var(--pink);
+    background-color: #9b6fc2;
 
     color: white;
 
     text-decoration: none;
 
-    border-radius: 30px;
+    border-radius: 25px;
 
     font-weight: bold;
-
-    box-shadow: 0 5px 15px rgba(201, 111, 137, 0.25);
 
     transition: 0.3s;
 }
 
 .button:hover {
-    background-color: var(--dark-sage);
+    background-color: #806096;
 
-    transform: translateY(-4px);
-
-    box-shadow: 0 8px 20px rgba(95, 115, 80, 0.25);
+    transform: translateY(-3px);
 }
 
 
-/* ========================================
-   GENERAL SECTIONS
-======================================== */
+/* =========================
+   SECTIONS
+========================= */
 
 .section {
     min-height: 70vh;
 
     padding: 100px 8%;
-}
 
-.section-title {
     text-align: center;
-
-    margin-bottom: 45px;
 }
 
-.section-title p {
-    color: var(--dark-pink);
+.section h2 {
+    color: #5e4770;
 
-    font-size: 13px;
+    font-size: 40px;
 
-    font-weight: bold;
-
-    letter-spacing: 2px;
-}
-
-.section-title h2 {
-    color: var(--dark-sage);
-
-    font-size: 42px;
+    margin-bottom: 35px;
 }
 
 
-/* ========================================
-   ABOUT
-======================================== */
+/* =========================
+   ABOUT ME
+========================= */
 
 .about {
-    background-color: var(--light-sage);
+    background-color: #e9dcf5;
 
     display: flex;
     flex-direction: column;
@@ -281,120 +188,85 @@ nav ul li a:hover {
 }
 
 .about-box {
-    max-width: 800px;
+    max-width: 750px;
 
     margin: 0 auto;
 
-    padding: 40px;
+    padding: 35px;
 
-    background-color: white;
+    background-color: #ffffff;
 
-    border: 3px solid var(--pink);
+    border: 3px solid #c8a9df;
 
-    border-radius: 25px;
+    border-radius: 20px;
 
-    box-shadow: 0 10px 25px rgba(95, 115, 80, 0.15);
-
-    position: relative;
-}
-
-
-/* Pink top decoration */
-
-.about-box::before {
-    content: "🌸";
-
-    position: absolute;
-
-    top: -25px;
-    left: 50%;
-
-    transform: translateX(-50%);
-
-    background-color: var(--pink);
-
-    width: 50px;
-    height: 50px;
-
-    border-radius: 50%;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    font-size: 23px;
-}
-
-.about-box h3 {
-    color: var(--dark-pink);
-
-    font-size: 26px;
-
-    margin-bottom: 15px;
-
-    text-align: center;
+    box-shadow: 0 8px 20px rgba(80, 60, 100, 0.12);
 }
 
 .about-box p {
     margin-bottom: 15px;
 
-    text-align: center;
+    line-height: 1.8;
+}
+
+.about-box p:last-child {
+    margin-bottom: 0;
 }
 
 
-/* ========================================
+/* =========================
    SCHOOLWORKS
-======================================== */
+========================= */
 
 .schoolworks {
-    background-color: var(--light-pink);
+    background-color: #f3eafa;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
+.schoolworks-text {
+    margin-bottom: 40px;
+
+    color: #6d6075;
+}
+
+
+/* Photo Container */
+
 .schoolworks-container {
     display: flex;
 
     justify-content: center;
-    align-items: center;
 
-    gap: 40px;
+    gap: 35px;
 
-    max-width: 1000px;
+    max-width: 950px;
 
     margin: 0 auto;
 }
 
 
-/* ========================================
-   SCHOOLWORK PHOTOS
-======================================== */
+/* Schoolwork Photos */
 
 .schoolwork-card {
     width: 400px;
     height: 300px;
 
-    background-color: white;
-
-    border: 7px solid var(--sage-green);
-
-    border-radius: 25px;
+    display: block;
 
     overflow: hidden;
 
-    box-shadow: 0 10px 25px rgba(95, 115, 80, 0.2);
+    background-color: white;
+
+    border: 5px solid #c8a9df;
+
+    border-radius: 20px;
+
+    box-shadow: 0 8px 20px rgba(80, 60, 100, 0.15);
 
     transition: 0.3s ease;
-}
-
-.schoolwork-card:hover {
-    border-color: var(--pink);
-
-    transform: translateY(-10px) rotate(1deg);
-
-    box-shadow: 0 15px 30px rgba(201, 111, 137, 0.25);
 }
 
 .schoolwork-card img {
@@ -408,33 +280,40 @@ nav ul li a:hover {
     transition: 0.4s ease;
 }
 
+
+/* Hover Effect */
+
+.schoolwork-card:hover {
+    border-color: #9b6fc2;
+
+    transform: translateY(-8px);
+
+    box-shadow: 0 12px 25px rgba(155, 111, 194, 0.3);
+}
+
 .schoolwork-card:hover img {
-    transform: scale(1.06);
+    transform: scale(1.05);
 }
 
 
-/* ========================================
+/* =========================
    FOOTER
-======================================== */
+========================= */
 
 footer {
-    padding: 30px;
+    padding: 25px;
 
     text-align: center;
 
-    background-color: var(--dark-sage);
+    background-color: #d8c2eb;
 
-    color: white;
-}
-
-footer p {
-    margin: 0;
+    color: #5e4770;
 }
 
 
-/* ========================================
-   RESPONSIVE DESIGN
-======================================== */
+/* =========================
+   RESPONSIVE
+========================= */
 
 @media (max-width: 800px) {
 
@@ -443,24 +322,20 @@ footer p {
     }
 
     nav ul {
-        gap: 10px;
+        gap: 12px;
     }
 
     nav ul li a {
         font-size: 14px;
-        padding: 6px 8px;
     }
 
-    .hero h1 {
-        font-size: 40px;
-    }
-
-    .hero h2 {
-        font-size: 23px;
+    .home h1 {
+        font-size: 38px;
     }
 
     .schoolworks-container {
         flex-direction: column;
+        align-items: center;
     }
 
     .schoolwork-card {
@@ -484,32 +359,27 @@ footer p {
 
     nav ul {
         flex-wrap: wrap;
-
         justify-content: center;
     }
 
-    .hero {
+    .home {
         padding-top: 150px;
     }
 
-    .hero h1 {
+    .home h1 {
         font-size: 32px;
     }
 
-    .hero h2 {
-        font-size: 20px;
+    .home h2 {
+        font-size: 21px;
     }
 
     .section {
         padding: 80px 5%;
     }
 
-    .section-title h2 {
-        font-size: 34px;
-    }
-
-    .about-box {
-        padding: 30px 20px;
+    .section h2 {
+        font-size: 32px;
     }
 
     .schoolwork-card {
@@ -518,32 +388,4 @@ footer p {
 }
 ```
 
-```css id="b7c3wm"
-/* Clickable Schoolwork Photos */
-
-.schoolwork-card a {
-    display: block;
-    width: 100%;
-    height: 100%;
-    cursor: pointer;
-}
-
-.schoolwork-card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-
-    transition: 0.4s ease;
-}
-
-.schoolwork-card:hover img {
-    transform: scale(1.06);
-    filter: brightness(0.9);
-}
-
-.schoolwork-card {
-    cursor: pointer;
-}
-```
 
