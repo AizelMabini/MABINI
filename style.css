@@ -214,6 +214,14 @@ h2::after {
     line-height: 1.5;
 }
 
+.clickable-photo {
+  cursor: pointer;
+  transition: transform 0.2s ease; /* Adds a smooth hover effect */
+}
+
+.clickable-photo:hover {
+  transform: scale(1.02); /* Slightly enlarges the photo on hover */
+}
 
 
 
