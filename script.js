@@ -1,18 +1,21 @@
+```javascript
+// ================================
+// PORTFOLIO BUTTON INTERACTIONS
+// ================================
 
-document.querySelectorAll('nav a').forEach(link => {
+// Get the button
+const button = document.querySelector(".button");
 
-    link.addEventListener('click', function(event) {
+// Add click effect
+button.addEventListener("click", function () {
 
-        event.preventDefault();
+    // Change button text temporarily
+    button.textContent = "Welcome! 🌸";
 
-        const target = document.querySelector(
-            this.getAttribute('href')
-        );
-
-        target.scrollIntoView({
-            behavior: 'smooth'
-        });
-
-    });
+    // Return to the original text after 1.5 seconds
+    setTimeout(function () {
+        button.textContent = "Learn More About Me";
+    }, 1500);
 
 });
+```
