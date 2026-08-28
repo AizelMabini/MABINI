@@ -1,24 +1,26 @@
 ```css
-
+/* ========================================
+   SAGE GREEN + PINK PORTFOLIO
+======================================== */
 
 :root {
-    --sage: #9caf88;
+    --sage-green: #9caf88;
     --dark-sage: #5f7350;
-    --light-sage: #e4eddc;
+    --light-sage: #e5eddf;
 
-    --pink: #d98ca5;
-    --dark-pink: #c56f8d;
-    --light-pink: #f8dce5;
+    --pink: #e49aae;
+    --dark-pink: #c96f89;
+    --light-pink: #f9dce5;
 
-    --cream: #fffaf7;
+    --cream: #fffaf8;
     --white: #ffffff;
-    --text: #4f554a;
+    --text: #4f554b;
 }
 
 
-/* =========================
+/* ========================================
    GENERAL
-========================= */
+======================================== */
 
 * {
     margin: 0;
@@ -29,9 +31,9 @@
 
 body {
     font-family: "Segoe UI", Arial, sans-serif;
-    color: var(--text);
     background-color: var(--cream);
-    line-height: 1.7;
+    color: var(--text);
+    line-height: 1.6;
 }
 
 section {
@@ -39,9 +41,9 @@ section {
 }
 
 
-/* =========================
+/* ========================================
    NAVIGATION
-========================= */
+======================================== */
 
 nav {
     position: fixed;
@@ -57,15 +59,15 @@ nav {
 
     padding: 0 8%;
 
-    background-color: var(--white);
+    background-color: var(--sage-green);
 
-    border-bottom: 3px solid var(--light-pink);
+    box-shadow: 0 3px 12px rgba(95, 115, 80, 0.2);
 
     z-index: 1000;
 }
 
 .logo {
-    color: var(--dark-sage);
+    color: white;
     font-size: 24px;
     font-weight: bold;
 }
@@ -77,21 +79,25 @@ nav ul {
 }
 
 nav ul li a {
-    color: var(--dark-sage);
+    color: white;
     text-decoration: none;
     font-weight: 600;
+
+    padding: 8px 12px;
+    border-radius: 20px;
 
     transition: 0.3s;
 }
 
 nav ul li a:hover {
-    color: var(--dark-pink);
+    background-color: var(--pink);
+    color: white;
 }
 
 
-/* =========================
+/* ========================================
    HOME
-========================= */
+======================================== */
 
 .hero {
     min-height: 100vh;
@@ -104,35 +110,72 @@ nav ul li a:hover {
 
     padding: 120px 10% 70px;
 
-    background:
-        radial-gradient(
-            circle at 10% 20%,
-            var(--light-pink),
-            transparent 25%
-        ),
-        radial-gradient(
-            circle at 90% 80%,
-            var(--light-sage),
-            transparent 30%
-        ),
-        var(--cream);
+    background-color: var(--light-pink);
+
+    position: relative;
+    overflow: hidden;
 }
+
+
+/* Decorative circles */
+
+.hero::before {
+    content: "";
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    background-color: var(--sage-green);
+
+    border-radius: 50%;
+
+    top: -100px;
+    left: -100px;
+
+    opacity: 0.35;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+
+    width: 250px;
+    height: 250px;
+
+    background-color: var(--pink);
+
+    border-radius: 50%;
+
+    bottom: -100px;
+    right: -70px;
+
+    opacity: 0.4;
+}
+
 
 .hero-text {
     max-width: 850px;
+    position: relative;
+    z-index: 2;
 }
 
 .welcome {
     color: var(--dark-pink);
+
     font-size: 14px;
     font-weight: bold;
+
     letter-spacing: 3px;
+
     margin-bottom: 15px;
 }
 
 .hero h1 {
     color: var(--dark-sage);
+
     font-size: 55px;
+
     margin-bottom: 10px;
 }
 
@@ -141,71 +184,93 @@ nav ul li a:hover {
 }
 
 .hero h2 {
-    color: var(--sage);
+    color: var(--sage-green);
+
     font-size: 28px;
+
     margin-bottom: 20px;
 }
 
 .hero p:not(.welcome) {
     max-width: 650px;
+
     margin: 0 auto 30px;
+
+    color: var(--text);
+
+    font-size: 17px;
 }
 
 
-/* Button */
+/* ========================================
+   BUTTON
+======================================== */
 
 .button {
     display: inline-block;
 
-    padding: 12px 28px;
+    padding: 13px 30px;
 
     background-color: var(--pink);
-    color: var(--white);
+
+    color: white;
+
+    text-decoration: none;
 
     border-radius: 30px;
 
-    text-decoration: none;
     font-weight: bold;
+
+    box-shadow: 0 5px 15px rgba(201, 111, 137, 0.25);
 
     transition: 0.3s;
 }
 
 .button:hover {
     background-color: var(--dark-sage);
-    transform: translateY(-3px);
+
+    transform: translateY(-4px);
+
+    box-shadow: 0 8px 20px rgba(95, 115, 80, 0.25);
 }
 
 
-/* =========================
-   GENERAL SECTION
-========================= */
+/* ========================================
+   GENERAL SECTIONS
+======================================== */
 
 .section {
     min-height: 70vh;
+
     padding: 100px 8%;
 }
 
 .section-title {
     text-align: center;
+
     margin-bottom: 45px;
 }
 
 .section-title p {
     color: var(--dark-pink);
+
     font-size: 13px;
+
     font-weight: bold;
+
     letter-spacing: 2px;
 }
 
 .section-title h2 {
     color: var(--dark-sage);
+
     font-size: 42px;
 }
 
 
-/* =========================
+/* ========================================
    ABOUT
-========================= */
+======================================== */
 
 .about {
     background-color: var(--light-sage);
@@ -222,32 +287,64 @@ nav ul li a:hover {
 
     padding: 40px;
 
-    background-color: var(--white);
+    background-color: white;
 
-    border-left: 7px solid var(--pink);
-    border-radius: 20px;
+    border: 3px solid var(--pink);
+
+    border-radius: 25px;
 
     box-shadow: 0 10px 25px rgba(95, 115, 80, 0.15);
+
+    position: relative;
+}
+
+
+/* Pink top decoration */
+
+.about-box::before {
+    content: "🌸";
+
+    position: absolute;
+
+    top: -25px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    background-color: var(--pink);
+
+    width: 50px;
+    height: 50px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 23px;
 }
 
 .about-box h3 {
     color: var(--dark-pink);
+
     font-size: 26px;
+
     margin-bottom: 15px;
+
+    text-align: center;
 }
 
 .about-box p {
     margin-bottom: 15px;
+
+    text-align: center;
 }
 
-.about-box p:last-child {
-    margin-bottom: 0;
-}
 
-
-/* =========================
+/* ========================================
    SCHOOLWORKS
-========================= */
+======================================== */
 
 .schoolworks {
     background-color: var(--light-pink);
@@ -263,7 +360,7 @@ nav ul li a:hover {
     justify-content: center;
     align-items: center;
 
-    gap: 35px;
+    gap: 40px;
 
     max-width: 1000px;
 
@@ -271,17 +368,19 @@ nav ul li a:hover {
 }
 
 
-/* Schoolwork Photo */
+/* ========================================
+   SCHOOLWORK PHOTOS
+======================================== */
 
 .schoolwork-card {
     width: 400px;
     height: 300px;
 
-    background-color: var(--white);
+    background-color: white;
 
-    border: 6px solid var(--sage);
+    border: 7px solid var(--sage-green);
 
-    border-radius: 22px;
+    border-radius: 25px;
 
     overflow: hidden;
 
@@ -293,9 +392,9 @@ nav ul li a:hover {
 .schoolwork-card:hover {
     border-color: var(--pink);
 
-    transform: translateY(-8px);
+    transform: translateY(-10px) rotate(1deg);
 
-    box-shadow: 0 15px 30px rgba(197, 111, 141, 0.25);
+    box-shadow: 0 15px 30px rgba(201, 111, 137, 0.25);
 }
 
 .schoolwork-card img {
@@ -310,13 +409,13 @@ nav ul li a:hover {
 }
 
 .schoolwork-card:hover img {
-    transform: scale(1.05);
+    transform: scale(1.06);
 }
 
 
-/* =========================
+/* ========================================
    FOOTER
-========================= */
+======================================== */
 
 footer {
     padding: 30px;
@@ -325,7 +424,7 @@ footer {
 
     background-color: var(--dark-sage);
 
-    color: var(--white);
+    color: white;
 }
 
 footer p {
@@ -333,9 +432,9 @@ footer p {
 }
 
 
-/* =========================
-   RESPONSIVE
-========================= */
+/* ========================================
+   RESPONSIVE DESIGN
+======================================== */
 
 @media (max-width: 800px) {
 
@@ -344,15 +443,20 @@ footer p {
     }
 
     nav ul {
-        gap: 15px;
+        gap: 10px;
     }
 
     nav ul li a {
         font-size: 14px;
+        padding: 6px 8px;
     }
 
     .hero h1 {
         font-size: 40px;
+    }
+
+    .hero h2 {
+        font-size: 23px;
     }
 
     .schoolworks-container {
@@ -370,14 +474,17 @@ footer p {
 
     nav {
         height: auto;
+
         padding: 15px;
 
         flex-direction: column;
+
         gap: 10px;
     }
 
     nav ul {
         flex-wrap: wrap;
+
         justify-content: center;
     }
 
@@ -390,7 +497,7 @@ footer p {
     }
 
     .hero h2 {
-        font-size: 22px;
+        font-size: 20px;
     }
 
     .section {
@@ -402,11 +509,11 @@ footer p {
     }
 
     .about-box {
-        padding: 25px;
+        padding: 30px 20px;
     }
 
     .schoolwork-card {
         height: 250px;
     }
 }
-
+```
