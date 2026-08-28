@@ -1,391 +1,188 @@
-```css
-/* =========================
-   GENERAL
-========================= */
-
+/* Base Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    scroll-behavior: smooth;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f3eafa;
-    color: #4d4357;
+    background-color: #f3ebf7; /* Light purple background */
+    color: #333333;
+    line-height: 1.6;
 }
 
-
-/* =========================
-   NAVIGATION
-========================= */
-
+/* Navigation */
 nav {
+    background-color: #ffffff;
     position: fixed;
-    top: 0;
-    left: 0;
-
     width: 100%;
-    height: 70px;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(106, 27, 154, 0.1);
+}
 
+.nav-container {
+    max-width: 1100px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    padding: 0 8%;
-
-    background-color: #d8c2eb;
-
-    box-shadow: 0 3px 10px rgba(80, 60, 100, 0.15);
-
-    z-index: 1000;
+    padding: 20px;
 }
 
 .logo {
-    color: #5e4770;
-    font-size: 23px;
+    font-size: 24px;
     font-weight: bold;
+    color: #6a1b9a; /* Deep purple accent */
 }
 
-nav ul {
-    display: flex;
-    gap: 25px;
+.nav-links {
     list-style: none;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #5e4770;
-    font-weight: bold;
-
-    transition: 0.3s;
-}
-
-nav ul li a:hover {
-    color: #9b6fc2;
-}
-
-
-/* =========================
-   HOME
-========================= */
-
-.home {
-    min-height: 100vh;
-
     display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #555555;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #6a1b9a;
+}
+
+/* Section Layouts */
+section {
+    padding: 100px 20px 60px 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+}
 
+.container {
+    width: 100%;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+h2 {
+    font-size: 32px;
+    color: #4a148c;
+    margin-bottom: 20px;
     text-align: center;
-
-    padding: 100px 10%;
-
-    background-color: #f3eafa;
+    position: relative;
 }
 
-.home-content {
-    max-width: 750px;
+h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 4px;
+    background-color: #ba68c8;
+    margin: 10px auto 0 auto;
+    border-radius: 2px;
 }
 
-.welcome {
-    color: #9b6fc2;
+/* Home Section */
+#home {
+    text-align: center;
+}
 
-    font-size: 14px;
-    font-weight: bold;
-
-    letter-spacing: 3px;
-
+.home-content h1 {
+    font-size: 48px;
+    color: #4a148c;
     margin-bottom: 15px;
 }
 
-.home h1 {
-    color: #5e4770;
-
-    font-size: 50px;
-
-    margin-bottom: 10px;
-}
-
-.home h1 span {
-    color: #9b6fc2;
-}
-
-.home h2 {
-    color: #806096;
-
-    font-size: 25px;
-
-    margin-bottom: 20px;
-}
-
-.home-content > p:not(.welcome) {
+.home-content p {
+    font-size: 20px;
+    color: #666666;
     margin-bottom: 30px;
 }
 
-
-/* =========================
-   BUTTON
-========================= */
-
-.button {
+.btn {
     display: inline-block;
-
-    padding: 12px 28px;
-
-    background-color: #9b6fc2;
-
+    background-color: #6a1b9a;
     color: white;
-
+    padding: 12px 30px;
     text-decoration: none;
-
     border-radius: 25px;
-
-    font-weight: bold;
-
-    transition: 0.3s;
+    font-weight: 600;
+    transition: background 0.3s;
 }
 
-.button:hover {
-    background-color: #806096;
-
-    transform: translateY(-3px);
+.btn:hover {
+    background-color: #4a148c;
 }
 
-
-/* =========================
-   SECTIONS
-========================= */
-
-.section {
-    min-height: 70vh;
-
-    padding: 100px 8%;
-
+/* About Me Section */
+.about-content {
+    font-size: 18px;
+    color: #444444;
+    max-width: 800px;
+    margin: 0 auto;
     text-align: center;
 }
 
-.section h2 {
-    color: #5e4770;
-
-    font-size: 40px;
-
-    margin-bottom: 35px;
+/* Schoolworks Section */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
 }
 
-
-/* =========================
-   ABOUT ME
-========================= */
-
-.about {
-    background-color: #e9dcf5;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.about-box {
-    max-width: 750px;
-
-    margin: 0 auto;
-
-    padding: 35px;
-
-    background-color: #ffffff;
-
-    border: 3px solid #c8a9df;
-
-    border-radius: 20px;
-
-    box-shadow: 0 8px 20px rgba(80, 60, 100, 0.12);
-}
-
-.about-box p {
-    margin-bottom: 15px;
-
-    line-height: 1.8;
-}
-
-.about-box p:last-child {
-    margin-bottom: 0;
-}
-
-
-/* =========================
-   SCHOOLWORKS
-========================= */
-
-.schoolworks {
-    background-color: #f3eafa;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.schoolworks-text {
-    margin-bottom: 40px;
-
-    color: #6d6075;
-}
-
-
-/* Photo Container */
-
-.schoolworks-container {
-    display: flex;
-
-    justify-content: center;
-
-    gap: 35px;
-
-    max-width: 950px;
-
-    margin: 0 auto;
-}
-
-
-/* Schoolwork Photos */
-
-.schoolwork-card {
-    width: 400px;
-    height: 300px;
-
-    display: block;
-
+.work-item {
+    background: #fdfbfe;
+    border: 1px solid #e1d5e7;
+    border-radius: 10px;
     overflow: hidden;
-
-    background-color: white;
-
-    border: 5px solid #c8a9df;
-
-    border-radius: 20px;
-
-    box-shadow: 0 8px 20px rgba(80, 60, 100, 0.15);
-
-    transition: 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+    transition: transform 0.3s;
 }
 
-.schoolwork-card img {
+.work-item:hover {
+    transform: translateY(-5px);
+}
+
+.work-item img {
     width: 100%;
-    height: 100%;
-
-    display: block;
-
+    height: 250px;
     object-fit: cover;
-
-    transition: 0.4s ease;
+    display: block;
 }
 
-
-/* Hover Effect */
-
-.schoolwork-card:hover {
-    border-color: #9b6fc2;
-
-    transform: translateY(-8px);
-
-    box-shadow: 0 12px 25px rgba(155, 111, 194, 0.3);
+.work-info {
+    padding: 20px;
 }
 
-.schoolwork-card:hover img {
-    transform: scale(1.05);
+.work-info h3 {
+    color: #4a148c;
+    margin-bottom: 10px;
+    font-size: 20px;
 }
 
+.work-info p {
+    color: #666666;
+    font-size: 15px;
+}
 
-/* =========================
-   FOOTER
-========================= */
-
+/* Footer */
 footer {
-    padding: 25px;
-
     text-align: center;
-
-    background-color: #d8c2eb;
-
-    color: #5e4770;
+    padding: 30px;
+    background-color: #ffffff;
+    color: #777777;
+    border-top: 1px solid #e1d5e7;
 }
-
-
-/* =========================
-   RESPONSIVE
-========================= */
-
-@media (max-width: 800px) {
-
-    nav {
-        padding: 0 5%;
-    }
-
-    nav ul {
-        gap: 12px;
-    }
-
-    nav ul li a {
-        font-size: 14px;
-    }
-
-    .home h1 {
-        font-size: 38px;
-    }
-
-    .schoolworks-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .schoolwork-card {
-        width: 100%;
-        max-width: 450px;
-    }
-}
-
-
-@media (max-width: 500px) {
-
-    nav {
-        height: auto;
-
-        padding: 15px;
-
-        flex-direction: column;
-
-        gap: 10px;
-    }
-
-    nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .home {
-        padding-top: 150px;
-    }
-
-    .home h1 {
-        font-size: 32px;
-    }
-
-    .home h2 {
-        font-size: 21px;
-    }
-
-    .section {
-        padding: 80px 5%;
-    }
-
-    .section h2 {
-        font-size: 32px;
-    }
-
-    .schoolwork-card {
-        height: 250px;
-    }
-}
-```
 
 
