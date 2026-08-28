@@ -517,3 +517,33 @@ footer p {
     }
 }
 ```
+
+```css id="b7c3wm"
+/* Clickable Schoolwork Photos */
+
+.schoolwork-card a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.schoolwork-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+
+    transition: 0.4s ease;
+}
+
+.schoolwork-card:hover img {
+    transform: scale(1.06);
+    filter: brightness(0.9);
+}
+
+.schoolwork-card {
+    cursor: pointer;
+}
+```
+
