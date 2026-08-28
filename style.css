@@ -190,3 +190,9 @@ home {
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
 }
 
+.circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
