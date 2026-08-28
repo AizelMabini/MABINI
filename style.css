@@ -31,7 +31,7 @@
 
 body {
     font-family: "Segoe UI", Arial, sans-serif;
-    background-color: var(--sage green);
+    background-color: var(--#9caf88);
     color: var(--text);
     line-height: 1.6;
 }
@@ -59,7 +59,7 @@ nav {
 
     padding: 0 8%;
 
-    background-color: var(--sage-green);
+    background-color: var(--#9caf88);
 
     box-shadow: 0 3px 12px rgba(95, 115, 80, 0.2);
 
@@ -90,7 +90,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: var(--pink);
+    background-color: var(#f9dce5);
     color: white;
 }
 
@@ -110,7 +110,7 @@ nav ul li a:hover {
 
     padding: 120px 10% 70px;
 
-    background-color: var(--light-pink);
+    background-color: var(#f9dce5);
 
     position: relative;
     overflow: hidden;
