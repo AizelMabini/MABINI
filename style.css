@@ -214,39 +214,6 @@ h2::after {
     line-height: 1.5;
 }
 
-/* ==========================================================================
-   5. Footer & Media Queries
-   ========================================================================== */
-footer {
-    text-align: center;
-    padding: 35px 20px;
-    background-color: #ffffff;
-    color: #777777;
-    font-weight: 500;
-    border-top: 1px solid #e1d5e7;
-}
 
-/* Mobile Responsiveness Rules */
-@media (max-width: 768px) {
-    body {
-        padding-top: 70px;
-    }
-    nav {
-        height: 70px;
-    }
-    .home-content h1 {
-        font-size: 38px;
-    }
-    .container {
-        padding: 30px 20px;
-    }
-    .gallery {
-        grid-template-columns: 1fr; /* Switch to single stack on small screens */
-        gap: 25px;
-    }
-    .work-item img {
-        height: 220px;
-    }
-}
 
 
