@@ -202,6 +202,27 @@ h2::after {
 }
 
 .work-info {
+text-align: center;
+padding: 15px;
+}
+
+.work-info h3 {
+font-family: 'Trebuchet MS', sans-serif;
+color: #4a148c;
+font-size: 22px;
+font-weight: bold;
+margin-bottom: 8px;
+}
+
+.work-info p {
+font-family: 'Segoe UI', sans-serif;
+color: #666666;
+font-size: 15px;
+font-weight: normal;
+line-height: 1.5;
+}
+
+.work-info {
     text-align: center;
     padding: 15px;
 }
