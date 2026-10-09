@@ -19,14 +19,23 @@ body {
     padding-top: 80px;
 }
 
+
 .profile-picture {
-display: flex;
-justify-content: center;
-align-items: center;
-width: 100%;
-margin: 0 auto 25px;
-position: relative;
-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto 25px;
+}
+
+.profile-picture img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    display: block;
 }
 
 
