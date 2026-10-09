@@ -26,6 +26,8 @@ body {
     align-items: center;
     width: 100%;
     margin: 0 auto 25px;
+    position: relative;
+    top: -30px;
 }
 
 .profile-picture img {
