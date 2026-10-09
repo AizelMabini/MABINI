@@ -228,6 +228,20 @@ font-weight: normal;
 line-height: 1.5;
 }
 
+
+#schoolworks .work-info h3 {
+font-family: 'Trebuchet MS', sans-serif;
+color: #6a1b9a;
+font-size: 24px;
+font-weight: bold;
+}
+
+#schoolworks .work-info p {
+font-family: 'Georgia', serif;
+color: #9575a8;
+font-size: 16px;
+}
+
 .work-item:hover {
 transform: translateY(-5px);
 }
