@@ -1,6 +1,5 @@
-/* ==========================================================================
-   1. Base Reset & Typography
-   ========================================================================== */
+```css
+
 * {
     margin: 0;
     padding: 0;
@@ -9,24 +8,23 @@
 }
 
 html {
-    scroll-behavior: smooth; /* Smooth transitions when clicking nav links */
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
 }
 
 body {
-    background-color: #f3ebf7; /* Light purple background */
+    background-color: #f3ebf7;
     color: #333333;
     line-height: 1.6;
-    padding-top: 80px; /* FIXED: Prevents header from hiding section content */
+    padding-top: 80px;
 }
 
-/* ==========================================================================
-   2. Navigation Bar
-   ========================================================================== */
+
 nav {
     background-color: #ffffff;
     position: fixed;
     width: 100%;
-    height: 80px; /* Explicit height to match body padding */
+    height: 80px;
     top: 0;
     left: 0;
     z-index: 1000;
@@ -48,7 +46,7 @@ nav {
 .logo {
     font-size: 24px;
     font-weight: bold;
-    color: #6a1b9a; /* Deep purple accent */
+    color: #6a1b9a;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
@@ -71,12 +69,10 @@ nav {
     color: #6a1b9a;
 }
 
-/* ==========================================================================
-   3. Global Layout Structures
-   ========================================================================== */
+
 section {
     padding: 60px 20px;
-    min-height: calc(100vh - 80px); /* Center perfectly in viewport */
+    min-height: calc(100vh - 80px);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -89,7 +85,7 @@ section {
     background: #ffffff;
     padding: 50px 40px;
     border-radius: 16px;
-    box-shadow: 0 10px 30px rgba(106, 27, 154, 0.05); /* Soft purple tint shadow */
+    box-shadow: 0 10px 30px rgba(106, 27, 154, 0.05);
 }
 
 h2 {
@@ -106,16 +102,12 @@ h2::after {
     width: 60px;
     height: 4px;
     background-color: #ba68c8;
-    margin: 12px auto 0 auto;
+    margin: 12px auto 0;
     border-radius: 2px;
 }
 
-/* ==========================================================================
-   4. Component Sections
-   ========================================================================== */
 
-/* Home Layout */
-#home .container {
+.home-container {
     text-align: center;
     padding: 80px 40px;
 }
@@ -149,10 +141,9 @@ h2::after {
 .btn:hover {
     background-color: #4a148c;
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(106, 27, 154, 0.3);
 }
 
-/* About Me Layout */
+
 .about-content {
     font-size: 18px;
     color: #444444;
@@ -169,59 +160,93 @@ h2::after {
     margin-bottom: 0;
 }
 
-/* Schoolworks Photo Layout */
+
 .gallery {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* FIXED: Strict 2-column layout */
-    gap: 40px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px;
 }
+
 
 .work-item {
-    background: #fdfbfe;
-    border: 1px solid #e1d5e7;
-    border-radius: 12px;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-radius: 0;
     overflow: hidden;
-    transition: all 0.3s ease;
+    box-shadow: none;
+    transition: transform 0.3s ease;
 }
 
-.work-item:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 24px rgba(106, 27, 154, 0.1);
-}
 
 .work-item img {
-    width: 100%;
-    height: 300px; /* Fixed proportional display height */
-    object-fit: cover;
     display: block;
-    border-bottom: 1px solid #e1d5e7;
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    border-radius: 0;
 }
 
-.work-info {
-    padding: 25px;
+
+.work-item:hover {
+    transform: translateY(-5px);
+    box-shadow: none;
 }
 
-.work-info h3 {
-    color: #4a148c;
-    margin-bottom: 12px;
-    font-size: 22px;
-    font-weight: 600;
-}
 
-.work-info p {
-    color: #666666;
-    font-size: 16px;
-    line-height: 1.5;
-}
+@media (max-width: 600px) {
+    .nav-container {
+        padding: 0 12px;
+    }
 
-.clickable-photo {
-  cursor: pointer;
-  transition: transform 0.2s ease; /* Adds a smooth hover effect */
-}
+    .logo {
+        font-size: 18px;
+    }
 
-.clickable-photo:hover {
-  transform: scale(1.02); /* Slightly enlarges the photo on hover */
+    .nav-links {
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
+    section {
+        padding: 30px 15px;
+    }
+
+    .container {
+        padding: 30px 20px;
+    }
+
+    .home-content h1 {
+        font-size: 34px;
+    }
+
+    .home-content p {
+        font-size: 18px;
+    }
+
+    h2 {
+        font-size: 28px;
+        margin-bottom: 25px;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .work-item img {
+        height: auto;
+        max-height: 400px;
+    }
 }
+```
+
 
 
 
