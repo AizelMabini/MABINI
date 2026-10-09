@@ -26,8 +26,6 @@ body {
     align-items: center;
     width: 100%;
     margin: 0 auto 25px;
-    position: relative;
-    top: -30px;
 }
 
 .profile-picture img {
@@ -40,6 +38,11 @@ body {
     display: block;
 }
 
+.profile-picture {
+    position: relative;
+    top: -30px;
+    margin-bottom: 25px;
+}
 nav {
     background-color: #ffffff;
     position: fixed;
@@ -208,6 +211,22 @@ h2::after {
     outline: none;
     box-shadow: none;
     border-radius: 0;
+}
+
+.work-info {
+    text-align: center;
+    padding: 15px;
+}
+
+.work-info h3 {
+    color: #6a1b9a;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.work-info p {
+    color: #666666;
+    font-size: 15px;
 }
 
 
