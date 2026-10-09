@@ -220,14 +220,6 @@ font-weight: bold;
 margin-bottom: 8px;
 }
 
-.work-info p {
-font-family: 'Segoe UI', sans-serif;
-color: #666666;
-font-size: 15px;
-font-weight: normal;
-line-height: 1.5;
-}
-
 .work-item:hover {
 transform: translateY(-5px);
 }
